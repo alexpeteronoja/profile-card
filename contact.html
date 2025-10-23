@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>About</title>
+</head>
+
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article data-testid="test-contact-page" class="main-con">
+            <div class="contact-container">
+                <h1>Contact Us</h1>
+                <form id="contactForm">
+                    <label for="name">Full Name</label>
+                    <input id="name" data-testid="test-contact-name" required />
+                    <p id="error-name" data-testid="test-contact-error-name" aria-live="assertive"></p>
+
+                    <label for="email">Email</label>
+                    <input id="email" type="email" data-testid="test-contact-email" required />
+                    <p id="error-email" data-testid="test-contact-error-email" aria-live="assertive"></p>
+
+                    <label for="subject">Subject</label>
+                    <input id="subject" data-testid="test-contact-subject" required />
+                    <p id="error-subject" data-testid="test-contact-error-subject"></p>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" minlength="10" data-testid="test-contact-message" required></textarea>
+                    <p id="error-message" data-testid="test-contact-error-message"></p>
+
+                    <button type="submit" data-testid="test-contact-submit">
+              Send
+            </button>
+                    <p data-testid="test-contact-success" class="hidden">
+                        Thank you! Your message has been sent.
+                    </p>
+                </form>
+            </div>
+        </article>
+
+        <button type="button" class="click">click</button>
+    </main>
+
+    <script src="script.js" charset="UTF-8" defer></script>
+</body>
+
+</html>
